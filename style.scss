@@ -1,0 +1,128 @@
+// Colors
+$base: #000;
+$level1: #181823;
+$light-grey: #8491A0;
+$dark-grey: #5B6876;
+$text: #FFF;
+$primary: #5221E6;
+$green: #3CC74E;
+$pink: #E95D90;
+$peach: #FFF3E4;
+$violet: #FBE4FF;
+
+body {  
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Sen', sans-serif;  
+}
+
+h1, h2, h3, h4, p, span, div, ul, li, a, img, header, nav, main, footer, form, label {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: $base;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 72px;
+
+  .logo {
+    padding: 32px 0;
+  }
+
+  .menu {
+    display: flex;
+    .menu__item {
+      padding: 32px 24px;
+      a {
+        color: $text;
+        font-size: 16px;        
+        font-weight: 400;
+        line-height: 150%;        
+      }
+      &:hover {
+        background-color: $primary;
+        cursor: pointer;
+      }
+    }
+    .menu__item_active {
+      background-color: $primary;
+    }
+  }
+}
+
+.presentation {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .presentation__img {
+    max-width: 750px;
+    max-height: 650px;
+    margin: 78px 0 84px 0;
+    img {
+      width: 100%;
+    }
+  }
+  .presentation__block {
+    max-width: 738px;    
+    position: absolute;  
+    right: 40px;     
+    margin-bottom: 14px;    
+    h1 {
+      color: $text;
+      font-size: 78px;      
+      font-weight: 700;
+      line-height: normal;    
+      margin-bottom: 32px;  
+      span {
+        color: rgba(255, 255, 255, 0.50);
+      }
+    }
+    p {      
+      color: $text;
+      font-size: 18px;      
+      font-weight: 400;
+      line-height: 150%;
+    }
+  }
+}
+
+// .philosophy {
+//   display: flex;  
+
+//   .philosophy__block {
+//     background-color: $peach;
+//     max-width: 720px;
+//     padding: 120px 0 124px 72px;
+//     h1 {
+//       font-size: 55px;
+//       font-style: normal;
+//       font-weight: 700;
+//       line-height: normal;
+//     }
+//   }
+
+//   .philosophy__img {
+//     max-width: 720px;    
+//     & img {
+//       width: 100%;
+//     }
+//   }
+// }

@@ -1,0 +1,90 @@
+body {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Sen", sans-serif;
+}
+
+h1, h2, h3, h4, p, span, div, ul, li, a, img, header, nav, main, footer, form, label {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #000;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 72px;
+}
+.header .logo {
+  padding: 32px 0;
+}
+.header .menu {
+  display: flex;
+}
+.header .menu .menu__item {
+  padding: 32px 24px;
+}
+.header .menu .menu__item a {
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
+.header .menu .menu__item:hover {
+  background-color: #5221E6;
+  cursor: pointer;
+}
+.header .menu .menu__item_active {
+  background-color: #5221E6;
+}
+
+.presentation {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.presentation .presentation__img {
+  max-width: 750px;
+  max-height: 650px;
+  margin: 78px 0 84px 0;
+}
+.presentation .presentation__img img {
+  width: 100%;
+}
+.presentation .presentation__block {
+  max-width: 738px;
+  position: absolute;
+  right: 40px;
+  margin-bottom: 14px;
+}
+.presentation .presentation__block h1 {
+  color: #FFF;
+  font-size: 78px;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 32px;
+}
+.presentation .presentation__block h1 span {
+  color: rgba(255, 255, 255, 0.5);
+}
+.presentation .presentation__block p {
+  color: #FFF;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+}/*# sourceMappingURL=style.css.map */
