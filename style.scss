@@ -167,26 +167,51 @@ a {
   }
 }
 
+.philosophy {
+  display: flex;  
 
-// .philosophy {
-//   display: flex;  
+  .philosophy__block {
+    background-color: $peach;
+    max-width: 720px;
+    padding: 120px 0 124px 72px;
+    h2 {
+      color: $level1;
+      font-size: 55px;      
+      font-weight: 700;
+      line-height: normal;
+      margin-bottom: 24px;
+    }
+    p {
+        color: $dark-grey;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 150%;        
+        margin-bottom: 134px;
+        padding-right: 72px;
+    }
+    a {
+      color: $level1;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 150%;      
+      position: relative; 
+      &::after {        
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        bottom: -6px;  
+        left: 0;      
+        background-color: $light-grey;
+      }
+    }
+  }
 
-//   .philosophy__block {
-//     background-color: $peach;
-//     max-width: 720px;
-//     padding: 120px 0 124px 72px;
-//     h1 {
-//       font-size: 55px;
-//       font-style: normal;
-//       font-weight: 700;
-//       line-height: normal;
-//     }
-//   }
-
-//   .philosophy__img {
-//     max-width: 720px;    
-//     & img {
-//       width: 100%;
-//     }
-//   }
-// }
+  .philosophy__img {
+    max-width: 720px;    
+    max-height: 600px;
+    img {
+      width: 100%;
+    }
+  }
+}
