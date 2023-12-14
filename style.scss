@@ -40,13 +40,16 @@ $violet: #FBE4FF;
   left: 0; 
 }
 
-body {  
-  box-sizing: border-box;
+html {
   scroll-behavior: smooth;
+}
+
+body {  
+  box-sizing: border-box;  
   font-family: 'Sen', sans-serif;   
 }
 
-h1, h2, h3, h4, h5, p, span, div, ul, li, a, img, header, nav, main, footer, form, label {
+h1, h2, h3, h4, h5, p, span, div, ul, li, a, img, header, nav, main, footer, form, label, input, textarea, button {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -74,34 +77,37 @@ a {
   background: linear-gradient(to right, $base 37.5%, $level1 37.5%);
 
   .logo {
-    padding: 32px 0;
+    margin: 32px 0;
+    height: 24px;
   }
 
   .menu {
-    display: flex;
-    .menu__item {
-      padding: 32px 24px;
+    display: flex;    
+    .menu__item {      
       transition: all 0.5s ease-in;
       a {
         @include link;
+        display: block;
+        padding: 32px 24px;
         color: $text;             
       }
       &:hover {
         background-color: $primary;
-        cursor: pointer;
+        cursor: pointer;        
       }
     }
-    .menu__item_active {
-      background-color: $primary;
-      a {
-        &:hover {
-          cursor: default;
-        }
-      }
-      &:hover {
-        cursor: default;
-      }
-    }
+    // .menu__item_active {
+    //   background-color: $primary;
+    //   pointer-events: none;
+    //   a {
+    //     &:hover {
+    //       cursor: default;          
+    //     }
+    //   }
+    //   &:hover {
+    //     cursor: default;        
+    //   }
+    // }
   }
 }
 
@@ -110,7 +116,7 @@ a {
   align-items: center;
   position: relative;
   background: linear-gradient(to right, $base 37.5%, $level1 37.5%);  
-  padding: 78px 0 80px 0;
+  padding: 80px 0;
   .presentation__img {
     max-width: 750px;
     max-height: 650px;    
@@ -580,7 +586,7 @@ a {
     p {
       @include paragraph;
       color: $light-grey;
-      max-width: 526px;
+      width: 526px;
     }
   }
   .form {
@@ -593,8 +599,10 @@ a {
       font-weight: 400;
       line-height: 150%;
       display: flex;
-      flex-direction: column;
-      gap: 8px;
+      flex-direction: column;  
+      span {
+        margin-bottom: 8px;
+      }    
       input, textarea {
         color: $text;
         width: 526px;
@@ -624,6 +632,58 @@ a {
         cursor: pointer;        
         background-color: transparent;
       }
+    }
+  }
+}
+
+.footer {
+  background-color: $level1;
+  padding: 80px 72px;
+  display: flex;
+  justify-content: space-between;
+  .footer__left-block {
+    .footer__logo {
+      margin-bottom: 27px;
+    }
+    .footer__icons {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 142px;   
+      a {
+        display: block;
+        height: 24px;
+        width: 24px;
+      }
+    }
+    p {
+      color: $light-grey;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 150%;
+    }
+  }
+  .footer__right-block {
+    height: 192px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-right: 110px;
+    li {
+      display: flex;
+      width: 196px;
+      height: 48px;
+      flex-direction: column;
+      justify-content: center;
+      a {
+        color: $text;
+        transition: all 0.5s ease-in;
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+    li:first-child {
+      margin-right: 24px;
     }
   }
 }
